@@ -10,7 +10,7 @@ export const getClient = (req = null)=>{
       headers:{
         authorization:a,
       },    
-      uri:'http://localhost:5000'}),
+      uri:'https://chainmedic-server.herokuapp.com/'}),
     ssrMode:true,
     name: 'credicity-web-client',
     version: '1.0',
