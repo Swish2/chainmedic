@@ -131,7 +131,7 @@ module.exports = {
             defaults:{phoneNumber:input.phoneNumber,password:hash,publicKey:user.publicKey,privateKey:user.privateKey,code,status:false}
            })
            if(created){
-            handleEmail(input.email,`Dear ${input.name}, your account has been created successfully.  <a href="http://localhost/verify">Click here</a> and use the following code to activate your account <b>${code}</b>`,
+            handleEmail(input.email,`Dear ${input.name}, your account has been created successfully.  <a href="https://chainmedic-patient.herokuapp.com/verify">Click here</a> and use the following code to activate your account <b>${code}</b>`,
             "ChainMedic | Verify Account")
                return{status:true,message:"Account is created"}
            }else{
