@@ -17,7 +17,7 @@ const Nav = ()=>{
     return(
         <>
         <Head>
-            <title>HOS</title>
+            <title>Users</title>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         </Head>
         <nav className="indigo">
