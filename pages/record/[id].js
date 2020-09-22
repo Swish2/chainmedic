@@ -56,7 +56,7 @@ return(
                        {
                            data ? data.getAllRecordByUserId.map(({transId,hospital,createdAt},i)=>(
 
-                           <tr><td>{1+i}.</td><td>{hospital.name}</td><td>{hospital.phoneNumber}</td><td>{hospital.address}</td><td>{createdAt}</td><td><Link href="/hos/info/[tid]" as={`/hos/info/${transId}`}><a><i className="material-icons">visibility</i></a></Link></td></tr>
+                           <tr><td>{1+i}.</td><td>{hospital.name}</td><td>{hospital.phoneNumber}</td><td>{hospital.address}</td><td>{createdAt}</td><td><Link href="/info/[tid]" as={`/info/${transId}`}><a><i className="material-icons">visibility</i></a></Link></td></tr>
                            )):null
                        }
                        </tbody>
