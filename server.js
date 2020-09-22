@@ -5,7 +5,8 @@ const jwt = require('jsonwebtoken')
 
 const PORT = process.env.PORT || 5000
 
-const server = new ApolloServer({typeDefs,resolvers,context:({req})=>{
+const server = new ApolloServer({typeDefs,resolvers,introspection: true,
+  playground: true,context:({req})=>{
   const token = req.headers.authorization || ''
   let user;
   try {
