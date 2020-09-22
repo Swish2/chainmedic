@@ -12,6 +12,7 @@ const [createHospital] = useMutation(CREATE_HOSPITAL,{
     onCompleted({createHospital}){
        if(createHospital.status){
            toast.success(createHospital.message)
+
        }else{
         toast.error(createHospital.message)
        }
@@ -60,7 +61,7 @@ const [createHospital] = useMutation(CREATE_HOSPITAL,{
                         <button className="login-btn" onClick={handleSubmit} disabled={isSubmitting}>{isSubmitting ? "Please wait":"Register"}</button>
                         </Form>
                     )}</Formik>
-                    <p className="link">Have an account ? <Link href="/hos/"><a>Login</a></Link></p>
+                    <p className="link">Have an account ? <Link href="/"><a>Login</a></Link></p>
                 </div>
             </div>
 

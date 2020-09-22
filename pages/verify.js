@@ -59,7 +59,7 @@ const [verifyHospital] = useMutation(VERIFY_HOSPITAL,{
                         <button className="login-btn" onClick={handleSubmit} disabled={isSubmitting}>{isSubmitting ? "Please wait":"Verify"}</button>
                         </Form>
                     )}</Formik>
-                    <p className="link">Don't have an account ? <Link href="/hos/register"><a>Create account</a></Link></p>
+                    <p className="link">Don't have an account ? <Link href="/register"><a>Create account</a></Link></p>
                 </div>
             </div>
 

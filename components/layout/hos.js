@@ -11,7 +11,7 @@ const Nav = ()=>{
 
     const handleLogout = ()=>{
         localStorage.removeItem("hos_token")
-        Router.push('/hos/')
+        Router.push('/')
     }
 
     return(
