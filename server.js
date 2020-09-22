@@ -3,6 +3,8 @@ const typeDefs = require('./schema')
 const resolvers = require('./schema/resolver')
 const jwt = require('jsonwebtoken')
 
+const PORT = process.env.PORT || 5000
+
 const server = new ApolloServer({typeDefs,resolvers,context:({req})=>{
   const token = req.headers.authorization || ''
   let user;
@@ -16,6 +18,6 @@ const server = new ApolloServer({typeDefs,resolvers,context:({req})=>{
   }
   return {user}
 }})
-server.listen(5000).then(({url})=>{
+server.listen(PORT).then(({url})=>{
   console.log(`Running on ${url}`)
 })
