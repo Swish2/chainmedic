@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import Nav from '../components/layout'
+import Nav from '../components/layout/hos'
 import Link from 'next/link'
 import {useQuery,useMutation} from '@apollo/client'
 import {GET_HOSPITAL_PROFILE,UPDATE_HOSPITAL} from '../graphql/schema'
