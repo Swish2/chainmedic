@@ -37,7 +37,7 @@ const Dashboard = ()=>{
                     <tbody>
                         {
                             data && data.getAccessByHospital ? data.getAccessByHospital.map(({id,createdAt,user},i)=>(
-                                <tr key={i}><td>{1+i}.</td><td className="user" onClick={()=>handleUser(user.id)}>{user.name}</td><td>{user.email}</td><td>{user.phoneNumber}</td><td><Link as={`/hos/record/${user.id}_${user.name.replace(/\s+/g, '-').toLowerCase()}`} href="/hos/record/[id]"><a><i className="material-icons">visibility</i></a></Link></td></tr>
+                                <tr key={i}><td>{1+i}.</td><td className="user" onClick={()=>handleUser(user.id)}>{user.name}</td><td>{user.email}</td><td>{user.phoneNumber}</td><td><Link as={`/record/${user.id}_${user.name.replace(/\s+/g, '-').toLowerCase()}`} href="/record/[id]"><a><i className="material-icons">visibility</i></a></Link></td></tr>
                             )):null
                         }
                       
