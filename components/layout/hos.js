@@ -22,8 +22,9 @@ const Nav = ()=>{
         </Head>
         <nav className="indigo">
             <div className="nav-wrapper container">
-            <a href="#" className="brand-logo">ChainMedic</a>
+            <a href="/dashboard" className="brand-logo">ChainMedic</a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li><Link href="/dashboard"><a>Dashboard</a></Link></li>
                 <li><Link href="/profile"><a><i className="material-icons">person</i></a></Link></li>
                 <li onClick={()=>handleLogout()} className="logout"><i className="material-icons">power_settings_new</i></li>
             </ul>

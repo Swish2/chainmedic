@@ -34,6 +34,13 @@ const Index = ()=>{
        }
    })
 
+   const transDate = (str)=>{
+
+const date = new Date(str)
+console.log(date)
+
+return date.getDate(str)+'-'+date.getMonth()+'-'+date.getFullYear()
+   }
 
    useEffect(()=>{
        M.AutoInit()
@@ -45,6 +52,7 @@ return(
             <br /><br />
             
             <div className="container">
+                <Link href="/dashboard"><a className="btn blue">Patient Lists</a></Link>
             <h5>{id[1].replace("-"," ").toUpperCase()}'s Medical Records <button className="btn right indigo" onClick={()=>setIsOpen(true)}>Add Record</button></h5><br />
                {
                    loading ? <p>Loading...</p>:
@@ -71,7 +79,7 @@ return(
                     <Formik
                         enableReinitialize={true}
                         initialValues={{diagnosis:"",hypertensive:'', ulcer:"", bp:'',diabetics:'',allergies:'',smoke:'',drink:'',surgery:'',allergies:'',admission:'',medication:'',
-                        kids:'0',mode:'', userId:parseInt(id[0])}}
+                        kids:0,mode:"", userId:parseInt(id[0])}}
                         onSubmit={(input,{setSubmitting,resetForm})=>{
                             createRecord({variables:input}).then((res)=>{
                                 if(res.data.createRecord.status){
