@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {useMutation} from '@apollo/client'
 import {CREATE_HOSPITAL} from '../graphql/schema'
 import {ToastContainer,toast} from 'react-toastify'
+import Router from 'next/router'
 
 const Index = ()=>{
 
@@ -12,7 +13,7 @@ const [createHospital] = useMutation(CREATE_HOSPITAL,{
     onCompleted({createHospital}){
        if(createHospital.status){
            toast.success(createHospital.message)
-
+            Router.push("/verify")
        }else{
         toast.error(createHospital.message)
        }

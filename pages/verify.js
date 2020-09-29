@@ -5,7 +5,7 @@ import {useMutation} from '@apollo/client'
 import {VERIFY_HOSPITAL} from '../graphql/schema'
 import {ToastContainer,toast} from 'react-toastify'
 import Router from 'next/router'
-import Cookies from 'js-cookie'
+
 
 
 const Index = ()=>{
@@ -15,7 +15,7 @@ const [verifyHospital] = useMutation(VERIFY_HOSPITAL,{
     onCompleted({verifyHospital}){
        if(verifyHospital.status){
            toast.success(verifyHospital.message)
-           Router.push("/hos/")
+           Router.push("/")
        }else{
         toast.error(verifyHospital.message)
        }
