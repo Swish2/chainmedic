@@ -42,7 +42,7 @@ module.exports = {
                if(user) return await Access.findAll({where:{userId:user.id}})
         },
         getAllRecordByUserId: async(_,{userId},{user})=>{
-           if(user) return await Record.findAll({where:{patientId:userId}})
+           if(user) return await Record.findAll(['id','DESC'],{where:{patientId:userId}})
         },
         getAllRecordByUser: async(_,__,{user})=>{
            if(user) return await Record.findAll({where:{patientId:user.id}})
