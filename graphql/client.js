@@ -4,6 +4,7 @@ export const getClient = (req = null)=>{
 
   const a = typeof window !== 'undefined' ? localStorage.getItem("token"):null
 
+
   const client = new ApolloClient({
     cache:new InMemoryCache(),
     link: new HttpLink({
